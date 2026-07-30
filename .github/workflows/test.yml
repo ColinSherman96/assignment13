@@ -106,5 +106,4 @@ jobs:
             colinsherman/601_module13:latest
             colinsherman/601_module13:${{ github.sha }}
           platforms: linux/amd64,linux/arm64
-          cache-from: type=registry,ref=colinsherman/601_module13:cache
           cache-to: type=inline,mode=max
