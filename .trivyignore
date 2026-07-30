@@ -1,0 +1,8 @@
+GHSA-6v7p-g79w-8964
+
+# msgpack is only present as pip's vendored dependency.
+# The application does not directly depend on msgpack.
+
+CVE-2026-54283
+CVE-2026-48818
+CVE-2025-62727
