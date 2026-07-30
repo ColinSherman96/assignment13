@@ -69,7 +69,11 @@ jobs:
       - uses: actions/checkout@v4
       
       - name: Build image
-        run: docker build --no-cache -t app:test .
+        run: |
+          echo "Dockerfile contents:"
+          grep setuptools Dockerfile
+          docker build --no-cache --progress=plain -t app:test .
+          docker run --rm app:test pip show setuptools
       
       - name: Run Trivy vulnerability scanner
         uses: aquasecurity/trivy-action@master
